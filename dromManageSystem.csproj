@@ -101,7 +101,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\index.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\favicon.ico" />
   </ItemGroup>

@@ -9,8 +9,6 @@
       Title="DefaultPage">
 
     <Grid>
-        <TextBox FontSize="50">
-            test
-        </TextBox>
+        <Image Source="Images/index.png" Stretch="Fill" />
     </Grid>
 </Page>
