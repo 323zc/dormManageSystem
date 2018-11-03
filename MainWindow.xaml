@@ -1,0 +1,114 @@
+﻿<Window x:Class="Z0101WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Z0101WpfApp"
+        mc:Ignorable="d"
+        Icon="Images/favicon.ico"
+        Title="大学生宿舍管理系统" WindowState="Maximized" Height="450" Width="800">
+    <DockPanel>
+        <Grid Name="gridTitle" DockPanel.Dock="Top" Height="80">
+            <TextBlock Name="txtTitle" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Text="C#第一组" Foreground="OrangeRed"/>
+        </Grid>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="3" Fill="white" RadiusX="14" RadiusY="14" Stroke="Blue" StrokeDashArray="3" />
+            <Rectangle Grid.Column="0" Margin="7 7 0 7" Fill="#FFF3F8FD" RadiusX="10" RadiusY="10" Stroke="Blue" StrokeDashArray="3" />
+            <ScrollViewer Grid.Column="0" Margin="14,19,11,11" VerticalScrollBarVisibility="Visible">
+                <StackPanel Name="stackPanel1" DockPanel.Dock="Left" MinWidth="280">
+                    <StackPanel.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Margin" Value="10 5 5 0" />
+                            <Setter Property="Padding" Value="10" />
+                            <Setter Property="BorderBrush" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="Blue" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                            <EventSetter Event="Click" Handler="Button_Click"/>
+                        </Style>
+                        <Style TargetType="Expander">
+                            <Setter Property="Background" Value="AliceBlue" />
+                            <Setter Property="Foreground" Value="Green" />
+                            <Setter Property="Margin" Value="5 5 5 0" />
+                            <Setter Property="Padding" Value="5 10" />
+                            <Setter Property="FontSize" Value="18" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="IsExpanded" Value="false" />
+                        </Style>
+                        <Style TargetType="StackPanel">
+                            <Setter Property="Background" Value="White"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="首页" Margin="0 5"/>
+                        <Button Content="全部展开" Margin="0 5"/>
+                        <Button Content="全部折叠" Margin="0 5"/>
+                    </StackPanel>
+                    <Expander Header="用户管理">
+                        <StackPanel>
+                            <Button Content="添加用户" Tag=""/>
+                            <Button Content="修改用户" Tag=""/>
+                            <Button Content="删除用户" Tag=""/>
+                            <Button Content="数据备份" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="房间管理">
+                        <StackPanel>
+                            <Button Content="房间录入" Tag=""/>
+                            <Button Content="房间查询" Tag=""/>
+                            <Button Content="房间修改" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="住宿管理">
+                        <StackPanel>
+                            <Button Content="住宿情况" Tag=""/>
+                            <Button Content="办理迁入" Tag=""/>
+                            <Button Content="办理迁出" Tag=""/>
+                            <Button Content="调换房间" Tag=""/>
+                            <Button Content="来访登记" Tag=""/>
+                            <Button Content="人员查询" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="财产管理">
+                        <StackPanel>
+                            <Button Content="维修登记" Tag=""/>
+                            <Button Content="物品出入登记" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="违纪管理">
+                        <StackPanel>
+                            <Button Content="违纪登记" Tag=""/>
+                            <Button Content="违纪查询" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="数据统计">
+                        <StackPanel>
+                            <Button Content="房间统计" Tag=""/>
+                            <Button Content="人数统计" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                    <Expander Header="关于">
+                        <StackPanel>
+                            <Button Content="帮助" Tag=""/>
+                            <Button Content="关于我们" Tag=""/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+            <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext"
+                          Width="6" Background="Transparent" Margin="5 0 0 0" />
+            <Frame Name="frame1" Grid.Column="2"
+                   Source="DefaultPage.xaml"
+                   BorderThickness="2" BorderBrush="#FFA6C9FD"
+                   Margin="5 10 10 10"
+                   ScrollViewer.CanContentScroll="True"
+                   NavigationUIVisibility="Hidden" />
+        </Grid>
+    </DockPanel>
+</Window>
