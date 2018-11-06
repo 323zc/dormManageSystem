@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dromManageSystem;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,13 @@ namespace Z0101WpfApp {
 
         public MainWindow() {
             InitializeComponent();
+
+            // 初始登录界面
+            this.SourceInitialized += delegate {
+                LoginWindow w = new LoginWindow();
+                w.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                w.ShowDialog();
+            };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
@@ -54,6 +62,14 @@ namespace Z0101WpfApp {
                 MessageBox.Show("未找到 " + uri.OriginalString, "对方不想和你说话，并向你扔了一个Bug");
                 return;
             }
+
+            // 存在对象是窗体
+            if (obj is Window) {
+                Window w = obj as Window;
+                w.ShowDialog();
+                return;
+            }
+
             if (lastButton == btn) {
                 frame1.Refresh();
             }
