@@ -14,7 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Z0101WpfApp {
+namespace WpfApp
+{
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
@@ -40,7 +41,7 @@ namespace Z0101WpfApp {
             string content = btn.Content.ToString();
 
             if (content == "首页") {
-                frame1.Source = new Uri("DefaultPage.xaml", UriKind.Relative);
+                frame1.Source = new Uri("./src/DefaultPage.xaml", UriKind.Relative);
                 return;
             }
             else if (content == "全部展开") {
