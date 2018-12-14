@@ -107,7 +107,7 @@
             <GridSplitter Grid.Column="1" ResizeBehavior="PreviousAndNext"
                           Width="6" Background="Transparent" Margin="5 0 0 0" />
             <Frame Name="frame1" Grid.Column="2"
-                   Source="src/DefaultPage.xaml"
+                   Source="./src/DefaultPage.xaml"
                    BorderThickness="2" BorderBrush="#FFA6C9FD"
                    Margin="5 10 10 10"
                    ScrollViewer.CanContentScroll="True"

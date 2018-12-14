@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dromManageSystem"
         mc:Ignorable="d"
+        Icon="../images/favicon.ico"
         Title="LoginWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock
+            FontSize="50"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+        >
+            hello world
+        </TextBlock>
     </Grid>
 </Window>

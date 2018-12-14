@@ -9,10 +9,6 @@
       Title="DefaultPage">
 
     <Grid>
-<<<<<<< HEAD:DefaultPage.xaml
-        <Image Source="Images/index.png" Stretch="Fill" />
-=======
         <Image Source="../images/index.png" Stretch="Uniform" />
->>>>>>> dev:WpfApp/src/DefaultPage.xaml
     </Grid>
 </Page>
